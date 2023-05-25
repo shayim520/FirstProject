@@ -1,0 +1,27 @@
+<template>
+  <lightning-card title="Data Binding 3" icon-name="utility:add">
+    <div class="slds-var-m-around_medium">
+
+
+      <lightning-input
+        type="number"
+        variant="label-inline"
+        label="Firs Number"
+        onchange={handleNum1Change}
+      ></lightning-input>
+
+      <lightning-input
+        type="number"
+        variant="label-inline"
+        label="Firs Number"
+        onchange={handleNum2Change}
+      ></lightning-input>
+
+      <div class="slds-var-m-top_small slds-align_absolute-center">
+        Result is : {additionresult}
+      </div>
+
+
+    </div>
+  </lightning-card>
+</template>

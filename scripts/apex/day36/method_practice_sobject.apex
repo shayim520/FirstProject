@@ -1,0 +1,52 @@
+
+// Contact c1 = Utils.getContact('Snow');
+// System.debug('c1 value is : ' + c1);
+// //insert c1;
+
+// System.debug('Utils.getContact(\'ABC\') value is : ' 
+//                                 + Utils.getContact('ABC'));
+
+
+// // List<Contact> myContacts =  Utils.getContacts('Snow',10) ; 
+// // // size of myContacts should be 10
+// // System.debug('myContacts value is : ' + myContacts);
+
+// // Account newAcc = Utils.insertNewAccount('');
+// // System.debug('newAcc value is : ' + newAcc);
+
+
+//EmailManager.sendMail('shayim520@gmail.com', 'rom Apex', 'Thank you!!!');
+
+// Account myAcc= Utils.getAccountAndContacts('Acc with Contact', 4);
+// System.debug('myAcc value is : ' + myAcc);
+
+
+// List<Contact> childContacts = [SELECT LastNAme FROM Contact
+//                             WHERE AccountId = :myAcc.Id  ];
+
+// System.debug('childContacts value is : ' + childContacts);
+
+// Account acc = [SELECT Name, Id, (SELECT LastName from Contacts)
+//                 FROM Account
+//                 WHERE Name = 'Acc with Contact'
+//                 LIMIT 1 ] ; 
+                
+// // Print account name 
+// System.debug('acc.Name value is : ' + acc.Name);
+// // how do we access subquery part of parent to child query 
+// System.debug('acc.Contacts value is : ' + acc.Contacts);
+
+// List<Contact> accChildContacts  =  acc.contacts ; 
+// // print the contact lastname
+// for(Contact each : accChildContacts) {
+//     System.debug('Contact name value : ' + each.LastName);
+// }
+
+List<Contact> myContacts =  Utils.getContacts('ABCDEFG', 2) ; 
+// // // size of myContacts should be 10
+// // System.debug('myContacts value is : ' + myContacts);
+
+System.debug('Utils.getContacts(\'ABCDEFG\', 2) value is : ' + Utils.getContacts('ABCDEFG', 2));
+
+
+
