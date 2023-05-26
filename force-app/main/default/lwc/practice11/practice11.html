@@ -19,12 +19,12 @@
       <!-- Display foodArray in div tag with slds-box class-->
       <br>
 
-      <template for:each={foodArray} for:item="each">
+      <template for:each={filteredFoods} for:item="each">
       
       <!-- very first element after foreach directive must have 
-    attribute called key and point to unique identifier to each element in the arry
-since each element here is object, we can access the field using 
-each.theFieldName -->
+       attribute called key and point to unique identifier to each element in the arry
+       since each element here is object, we can access the field using 
+       each.theFieldName -->
         <div key={each.id} class="slds-box slds-box_x-small">
         The Food : {each.foodName} Calorie is {each.calories}
       </div>

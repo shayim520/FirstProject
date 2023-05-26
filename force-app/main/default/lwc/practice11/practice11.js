@@ -17,9 +17,18 @@ export default class Practice11 extends LightningElement {
 
     ];
 
+    // initialize the value with same value as foodArray
+    filteredFoods = this.foodArray;
+
 
     handleSearchKeyChange(event){
         this.searchKey =event.target.value;
+        // filter the foodArray according to searchKey
+        // and assign it to the filteredFoods
+        this.filteredFoods = this.foodArray.filter(each =>
+            each.foodName.toLowerCase().includes(this.searchKey.toLowerCase()));
+     // this.filteredFoods = this.foodArray.filter(each =>
+         // each.foodName.toLowerCase().includes( this.searchKey.toLowerCase() ) );
 
     }
 
