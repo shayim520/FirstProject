@@ -1,5 +1,5 @@
 <template>
-  <lightning-card title="Spinner" icon-name="standard:spinner">
+  <lightning-card title="Spinner" icon-name="utility:spinner">
     <div class="slds-var-m-around_medium">
       <!-- create lightning spinner with text loading
             conditionally display this 
@@ -17,11 +17,19 @@
         onclick={handleClick}
       ></lightning-button>
 
-<!-- create a button to show success toast message when clicked  -->
+      <!-- create a button to show success toast message when clicked  -->
       <lightning-button
-      label="Show Success Toast"
-      onclick={handleShowSuccessToast}
-    ></lightning-button>
+        label="Show Success Toast"
+        onclick={handleShowSuccessToast}
+        variant="success"
+      ></lightning-button>
+
+      <!-- Create a button to show error toast message when clicked  -->
+      <lightning-button
+        label="Show Error Toast"
+        onclick={handleShowErrorToast}
+        variant="destructive"
+      ></lightning-button>
 
 
     </div>
