@@ -1,7 +1,7 @@
 //description: to make a callout to the Spartan API
 public class HttpCalloutApex {
     
-    //GET ALL SPARTANS API
+    //GET ALL SPARTANS API  
     public static void HttpCalloutMethod(){
         Http http = new Http(); //INITIALIZING THE HTTP CALLOUTS
         HttpRequest request = new HttpRequest(); //INITIALIZING THE HTTP REQUEST CALLOUTS
@@ -17,7 +17,7 @@ public class HttpCalloutApex {
     public static void HttpCalloutMethodOne(){
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('https://pi2hscwpkz.us-east-1.awsapprunner.com/api/spartans/2');
+        request.setEndpoint('https://pi2hscwpkz.us-east-1.awsapprunner.com/api/spartans/7');
         request.setMethod('GET');
 
         HttpResponse response = http.send(request);
@@ -25,7 +25,7 @@ public class HttpCalloutApex {
         system.debug('response body -->'+response.getStatusCode()); //SHOWS RESPONSE STATUS
     }
 
-    //CREATE ONE SPARTAN USING API
+    //CREATE ONE SPARTAN USING API  
     public static void HttpCalloutMethodPost(){
         Http http = new Http();
         HttpRequest request = new HttpRequest();

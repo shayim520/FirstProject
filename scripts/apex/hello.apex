@@ -9,5 +9,5 @@
 // System.debug('Hello World!');
 // System.debug('My name is ' + tempvar);
 
-CallOutUtils.createSpartan('AAAAAAAAA','M', 420366568);
-HttpCalloutApex.HttpCalloutMethodPost();
+//CallOutUtils.createSpartan('Shay 12','Male', 1234567890);
+
