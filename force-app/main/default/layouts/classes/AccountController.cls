@@ -34,7 +34,7 @@ public with sharing class AccountController {
    * @param List of accounts in your SF org
    * with AnnualRevenue Field filled up
    */
-
+  @AuraEnabled(cacheable=true)
   public static List<Account> getAccountWithAnnualRevenue() {
     // List<Account> lst = [SELECT Id,Name, AnnualRevenue
     //         FROM Account
