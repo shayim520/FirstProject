@@ -10,7 +10,12 @@ export default class Practice18 extends LightningElement {
       ];
 
     @wire(getAccontsIfRevenueLessThan, {maxRevenue: '$sliderValue' })
-    myAccount;
+    myAccounts;
+
+    get myAccountInStr(){
+
+        return JSON.stringify(this.myAccounts,null,2)
+    }
 
 
     handleSliderChange(event){

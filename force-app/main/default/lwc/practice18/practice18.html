@@ -14,14 +14,21 @@
 
         <!-- conditionally display this datatable 
          according to the {myAccounts.data} actually has value-->
-          <template lwc:if={myAccount.data}>
+          <template lwc:if={myAccounts.data}>
             <lightning-datatable
               key-field="Id"
-              data={myAccount.data}
+              data={myAccounts.data}
               columns={columns}
-></lightning-datatable>
-</template>
+           ></lightning-datatable>
+          </template>
+
+          <template lwc:elseif={myAccounts.error}>
+            <p>ERROR OCCURED </p>
+
+          </template>
+
+          <pre> {myAccountInStr} </pre>
+
         </div>
     </lightning-card>
-
 </template>
