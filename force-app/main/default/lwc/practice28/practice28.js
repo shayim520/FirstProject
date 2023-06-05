@@ -14,7 +14,7 @@ export default class Practice28 extends LightningElement {
         if (data) {
             this.allAccounts = data; 
             this.error = undefined; 
-        } else if (error) {
+        } else if (error) { 
             this.error = error; 
             this.allAccounts = undefined; 
         }
