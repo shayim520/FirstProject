@@ -1,26 +1,31 @@
 <template>
-    <lightning-card title="Component Composition" icon-name="standard:action_list_component">
-      <div class="slds-var-m-around_medium">
+  <lightning-card
+    title="Component Composition"
+    icon-name="standard:action_list_component"
+  >
+    <div class="slds-var-m-around_medium s">
+      <!--  display practice 3component here -->
 
-        <!--  display practice 3component here -->
+      <!-- <c-practice3></c-practice3> -->
 
-        <c-practice3></c-practice3>
+      <!-- <c-practice4></c-practice4> -->
 
-        <!-- <c-practice4></c-practice4> -->
+      <lightning-input
+        type="text"
+        label="To The Child"
+        value={inputMsg}
+        onchange={handleChange}
+      ></lightning-input>
 
-        <c-practice30-child 
-            message="Hello there"
-            >     
-        </c-practice30-child>
+      <c-practice30-child 
+          message={inputMsg}
+          num="50"> 
+      </c-practice30-child>
 
-        <c-practice30-child 
-          message="Message from Parent"
-            num="100" 
-      ></c-practice30-child>
-        
-       
-      </div>
-    </lightning-card>
-
-
+      <c-practice30-child 
+          message="Hello there" 
+          num="100">
+      </c-practice30-child>
+    </div>
+  </lightning-card>
 </template>
