@@ -6,5 +6,7 @@ export default class Practice30Child extends LightningElement {
     @api  // make this property public , so parent can provide the value
     message;
 
+    @api
+    num; 
 
 }
