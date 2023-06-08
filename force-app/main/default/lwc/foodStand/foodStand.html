@@ -4,6 +4,9 @@
         <div class="slds-var-m-around_medium">
 
 
+            <p class="slds-text-heading_medium">Selected Food : {selectedFood}</p>
+            <br>
+
             <!-- show one food here -->
             <!-- <c-food-item item={oneItem}> </c-food-item> -->
 
@@ -12,7 +15,10 @@
             pass the data to the child -->
             <template for:each={foodArray} for:item="each">
 
-                <c-food-item key={each.id} menuel={each} >
+                <c-food-item 
+                      key={each.id} 
+                      menuel={each} 
+                      onpick={handleChildPickEvent}>
                 </c-food-item>
 
             </template>
