@@ -1,9 +1,9 @@
-import getAllBooks from "@salesforce/apex/BookConroller.getAllBooks";
+import getAllBooks from "@salesforce/apex/BookController.getAllBooks";
 import { LightningElement, wire } from "lwc";
 export default class BookStand extends LightningElement {
 
-    allBooks;
-    error;
+    allBooks; 
+    error; 
 
     selectedBookId;
 
@@ -12,21 +12,21 @@ export default class BookStand extends LightningElement {
     // get the data and do anything with it 
     // in this case simply set selectedBookId property
     handleBookSelected(event) {
-        console.log('parent responding to child select event and data ' + event.detail); 
+        console.log('GRAND parent responding to child select event and data ' + event.detail); 
         this.selectedBookId = event.detail; 
     }
 
+
     @wire(getAllBooks)
-    wiredBooks( {data, error} ){
-
-        if(data){
+    wiredBooks( {data, error}  ) {
+        
+        if (data) {
             this.allBooks = data;
-            this.error = undefined;
-            console.log(this.allBooks);
-        } else if (error){
+            this.error = undefined; 
+            console.log(this.allBooks); 
+        } else if (error) {
             this.allBooks = undefined;
-            this.error = error;
-
+            this.error = error; 
         }
 
     }

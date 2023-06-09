@@ -3,9 +3,10 @@
     <div class="slds-box slds-var-m-bottom_medium slds-theme_inverse">
         <lightning-icon icon-name="action:new_notebook" size="small" class="slds-var-m-right_small"></lightning-icon>
         <p class="slds-text-heading_large">  
-           Book Name :  {book.Name}
+           {book.Name}
         </p>
-        <p>The Price number is {book.Price__c} </p>
+        <p>Unit Price: {book.Price__c} </p>
+        <!-- this button will fire custom event for parent or grand parent to listen -->
         <lightning-button 
             label="Select Book" 
             onclick={handleClick}>
