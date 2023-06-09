@@ -7,7 +7,7 @@ import { MessageContext, subscribe, unsubscribe } from "lightning/messageService
 export default class LmsSubscriber extends LightningElement {
     
     receivedMessage = '';
-    
+        
     @wire(MessageContext)
     messageContext;
 
@@ -37,6 +37,11 @@ export default class LmsSubscriber extends LightningElement {
 
     }
 
+      // clean up the subscription when the component is disconnected
+      disconnectedCallback() {
+        unsubscribe(this.subscription); 
+        this.subscription = null; 
+    }
 
 
 
