@@ -1,0 +1,14 @@
+<template>
+    <template lwc:if={allBooks}>
+        <template for:each={allBooks} for:item="each">
+
+            <c-book-item 
+                key={each.Id}
+                book={each}
+                onselect={handleBookSelected}
+            ></c-book-item>
+
+        </template>
+    </template>
+
+</template>
