@@ -1,9 +1,11 @@
-import { LightningElement } from "lwc";
+import { LightningElement, wire } from "lwc";
 import { NavigationMixin } from 'lightning/navigation';
+import getOneContact from "@salesforce/apex/ContactController.getOneContact";
 
 export default class Practice31 extends NavigationMixin(LightningElement) {
 
-
+    @wire(getOneContact)
+    myContact;  // {data}
 
     handleNavigateToHome() {
         console.log('Navigating to Home Page');
@@ -74,15 +76,11 @@ export default class Practice31 extends NavigationMixin(LightningElement) {
             attributes: {
                 actionName: "view",
                 // actionName: "edit",
-                recordId: "003Dn00000KAt5ZIAT",
-                objectApiName: "Contact"
+                recordId: this.myContact.data.Id ,                  // "003Dm000004bW3tIAE",
+                // objectApiName: "Contact"
             }
         });
 
     }
-
-    
-
-    
 
 }
