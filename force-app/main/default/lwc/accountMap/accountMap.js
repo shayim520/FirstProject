@@ -1,6 +1,6 @@
 import { getFieldValue, getRecord } from "lightning/uiRecordApi";
 import { LightningElement, api, wire } from "lwc";
-import BillingStreet from "@salesforce/schema/Account.BillingAddress";
+import BillingStreet from "@salesforce/schema/Account.BillingStreet";
 import BillingCity from "@salesforce/schema/Account.BillingCity";
 import BillingState from "@salesforce/schema/Account.BillingState";
 import BillingCountry from "@salesforce/schema/Account.BillingCountry";
