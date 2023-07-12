@@ -1,0 +1,16 @@
+<template>
+    <div class="border">
+        <lightning-card title="  File Uploader  " icon-name="custom:custom13">
+            <div class="slds-var-m-around_medium">
+                <lightning-input type="file" accept = ".csv" label="Click to attach your csv file"
+                    onchange={handleFileUpload}></lightning-input>
+            </div>
+            <template if:true={fileData}>
+                <p> {fileData.filename} </p>
+            </template>
+            <lightning-button variant="brand" label="Submit" onclick={handleClick}
+                class="slds-var-m-left_x-small"></lightning-button>
+
+        </lightning-card>
+    </div>
+</template>
